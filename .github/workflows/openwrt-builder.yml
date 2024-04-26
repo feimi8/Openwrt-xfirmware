@@ -12,6 +12,11 @@
 
 name: OpenWrt H69K Builder
 
+# 给工作流设置权限
+permissions:
+  contents: write
+  actions: write
+
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -29,7 +34,6 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
