@@ -37,6 +37,7 @@ env:
 
 jobs:
   build:
+    if: false
     runs-on: ubuntu-22.04
 
     steps:
@@ -177,8 +178,3 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-jobs:
-  example:
-    if: false
-    runs-on: ubuntu-latest
-    steps: ...
